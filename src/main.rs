@@ -18,5 +18,5 @@ fn main() {
     let ron_ser = ron::ser::to_string(&flag).unwrap();
 
     let json_der: Test = serde_json::de::from_str(json_ser.as_str()).unwrap();
-    let ron_ser: Test = ron::de::from_str(json_ser.as_str()).unwrap();
+    let ron_ser: Test = ron::de::from_str(ron_ser.as_str()).unwrap();
 }
